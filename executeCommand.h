@@ -2,4 +2,4 @@
 #include <vector>
 #include <string>
 using namespace std;
-string executeCommand(vector<string> input);
+void executeCommand(vector<string> input);

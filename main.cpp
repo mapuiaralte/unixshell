@@ -4,25 +4,28 @@
 
 #include "inputParser.h"
 #include "executeCommand.h"
+#include "builtin.h"
 
 using namespace std;
 
 int main(){
+
+    initializeBuiltins();
+
     string command;
 
     while (true){
         cout << "hetah> ";
 
-        if(!getline(cin, command))
+        if (!getline(cin, command))
             break;
 
         vector<string> parsedInput = parser(command);
 
-        if(parsedInput.empty())
+        if (parsedInput.empty())
             continue;
 
-        cout << executeCommand(parsedInput) << endl;
+        executeCommand(parsedInput);
     }
-
     return 0;
 }

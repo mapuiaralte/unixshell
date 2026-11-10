@@ -5,8 +5,11 @@
 #include<string>
 #include <functional>
 #include<filesystem>
+#include<fstream>
+
 
 using namespace std;
+using namespace std::filesystem;
 
 using BuiltinFunc = function<int(const vector<string> &)>;
 
@@ -17,4 +20,3 @@ int pwd(const vector<string> &args);
 int echo(const vector<string> &args);
 int cd(const vector<string> &args);
 int exits(const vector<string> &args);
-int clear(const vector<string> &args);
